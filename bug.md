@@ -1,3 +1,8 @@
+ERROR: the following packages/stacks could not have their rosdep keys resolved
+to system dependencies:
+cartographer_turtlebot: No definition of [urg_node] for OS [fedora]
+cartographer_rviz: No definition of [rviz] for OS [fedora]
+
 #### Error when executing `catkin_make_isolated --install --use-ninja -j1`
 
 ```bash
