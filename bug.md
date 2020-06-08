@@ -1,4 +1,4 @@
-##### Error when executing ``
+#### Error when executing `catkin_make_isolated --install --use-ninja -j1`
 
 ```bash
 ==> Processing catkin package: 'cartographer_ros'
