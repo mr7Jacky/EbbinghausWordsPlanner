@@ -3,6 +3,9 @@ from datetime import timedelta
 
 
 class Generator:
+    """
+    Generate the plan
+    """
 
     def __init__(self):
         self.plan = dict()
@@ -38,7 +41,7 @@ class Generator:
                     cur_list = tot_lists - i
                 else:
                     cur_list = i + 1
-                self.append_dict(cur_data.strftime("%x"), "%s %d" % (list_name, cur_list))
+                self.append_dict(cur_data, "%s %d" % (list_name, cur_list))
 
     def get_plan(self):
         """
@@ -47,10 +50,13 @@ class Generator:
         """
         return self.plan
 
+    def clear_plan(self):
+        self.plan.clear()
+
 
 if __name__ == "__main__":
     x = datetime(2020, 11, 27)
     g = Generator()
     g.generate_plan(5, x, reverse=True)
-    p = g.get_plan()
+    p = g.get_plan().keys()
     print(p)
